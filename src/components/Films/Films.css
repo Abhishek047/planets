@@ -1,0 +1,27 @@
+.gridTable{
+    width: 90%;
+}
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #eaeaea;
+    font-size: 4em;
+}
+.head th{
+    color: aqua !important;
+}
+.item{
+    background-color: rgba(255,255,255,0.75);
+}
+.body{
+    display: flex;
+    min-height: 100vh;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #666666;
+    background-image: url(../../img/Res.jpg);
+    background-blend-mode: multiply;
+}

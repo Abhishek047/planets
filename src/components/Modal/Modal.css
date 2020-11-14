@@ -1,0 +1,124 @@
+
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center; 
+    background: rgba(0,0,0,0.5);
+  }
+  .dailog{
+      padding: 20px;
+      margin: 0 auto;
+      width: fit-content;
+      display: flex;
+      flex-flow: column;
+      align-items: flex-start;
+      justify-content: center; 
+      background-color: #eaeaea;
+}
+.heading{
+    align-self:center;
+    color: black;
+    font-size: 2em;
+    z-index: 0;
+    margin-bottom: 10px;
+    position: relative;
+}
+.heading::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    right: -10%;
+    transform: rotate(10deg);
+    border: 7px solid turquoise;
+}
+.input{
+    margin: 7px 0;
+    min-width: 300px;
+    display: flex;
+    flex-flow: row;
+}
+.input label{
+    flex-basis: 40%;
+    margin-right: 5px;
+}
+.input input{
+    flex-basis: 60%;
+    padding: 3px 5px;
+    border: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s;
+}
+.input input:focus{
+    outline: none;
+    background-color: rgba(0,0,0,0.15);
+    border-bottom: 1px solid black;
+}
+.error{
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 5px;
+    margin: 10px 0;
+    background-color: rgba(233,57,25,0.25);
+    border: 3px solid rgba(233,57,25,0.75);
+}
+.submit{
+    padding: 5px 10px;
+    margin: 10px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #333333;
+    font-size: 1.2em;
+    color: #eaeaea;
+    position: relative;
+}
+.submit::after{
+    content: "";
+    transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: absolute;
+    width: 100%;
+    border-radius: 3px;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transform: scale(0,1);
+    background-color: tomato;
+}
+.submit:hover::after{
+    transform: scale(1,1);
+}
+
+.label{
+    width: 100px;
+}
+.translateBox{
+    display: flex;
+    flex-flow: row;
+    align-self: flex-start;
+    margin:  10px 20px;
+}
+.translateBox label{
+    font-weight: 600;
+    padding: 5px;
+}
+.translateBox select{
+    margin: 0px 20px;
+    padding: 3px 10px;
+    font-size: 1em;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 2px 2px rgba(1, 1, 1, 0.25);
+    border-radius: 5px;
+}
+.translateBox select option{
+    border: none;
+}
