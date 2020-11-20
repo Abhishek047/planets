@@ -12,4 +12,8 @@ export const getItems = () => dispatch => {
         })
     })
     .catch(err => console.log(err));
+    dispatch({
+        type:'ITEM_LOADED',
+    })
+    
 }

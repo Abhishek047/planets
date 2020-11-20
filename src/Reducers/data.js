@@ -189,12 +189,17 @@
 // }
 const data ={ 
   planets: [],
-  isLoading: true,
+  isLoading: false,
 }
 
 const dataReducer = (state = data, action) => {
     switch (action.type) {
       case 'ITEM_LOADING':
+        return{
+          ...state,
+          isLoading: true
+        }
+      case 'ITEM_LOADED':
         return{
           ...state,
           isLoading: false

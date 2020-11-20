@@ -10,8 +10,9 @@ function Planets() {
   const planets = useSelector(state => state.data.planets);
   const [values, setValues] = useState(null);
   
+
+
 //ADD CUSTOM DATA HERE
-  
 function customizeValues(){
   const newVal = planets.map((item) => {
     const numberOfFilms = item.films.length;
